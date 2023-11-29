@@ -37,7 +37,7 @@ const data = {
      }
 };
 
-let submit = document.querySelector("#submit");
+let submit = document.querySelector(".submit");
 let inpt = document.querySelector("#inpt");
 let img = document.querySelector("#img");
 
@@ -46,7 +46,7 @@ submit.addEventListener("click", function () {
           for (let i = 0; i < 3; i++) {
                let im = document.createElement("img");
                let img2 = document.body.appendChild(im);
-               img2.setAttribute("class","img2")
+               img2.setAttribute("class", "img2")
                img2.src = data.Abid.image[i].img;
           }
      }
@@ -54,9 +54,18 @@ submit.addEventListener("click", function () {
           for (let i = 0; i < 5; i++) {
                let im = document.createElement("img");
                let img2 = document.body.appendChild(im);
-               img2.setAttribute("class","img2");
+               img2.setAttribute("class", "img2");
                img2.src = data.Sazid.image[i].img;
           }
      }
      inpt.value = "";
+});
+
+console.dir(submit);
+
+const refreshBtn = document.getElementById("refreshBtn");
+// function handleClick() {
+// }
+refreshBtn.addEventListener("click", function(){
+     window.location.reload();
 });
